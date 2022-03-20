@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { IconContext } from "react-icons";
 import { getCta } from "../../lib/cta";
 import { getNavigation } from "../../lib/navigation";
@@ -10,8 +11,11 @@ interface Props {
 const Sidebar: React.FC<Props> = ({
   
 }) => {
+  const { pathname } = useRouter();
   const navigation = getNavigation();
   const cta = getCta();
+
+  console.log(pathname);
 
   return (
     <section className="hidden sm:flex flex-col justify-end w-[250px] transition-all overflow-y-auto sticky top-0 left-0 max-h-[92vh] px-4 py-20 gap-8">
@@ -21,7 +25,7 @@ const Sidebar: React.FC<Props> = ({
             navigation.map((item, index) => (
               <li key={item.title + index}>
                 <Link href={item.path}>
-                  <a className="
+                  <a className={`
                     border-r-4
                     border-black
                     hover:border-blue-500
@@ -37,7 +41,8 @@ const Sidebar: React.FC<Props> = ({
                     text-right
                     pr-6
                     py-1
-                  ">
+                    ${ pathname === item.path && 'border-blue-800 text-blue-800' }
+                  `}>
                     {item.title}
                   </a>
                 </Link>
