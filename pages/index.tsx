@@ -62,7 +62,7 @@ const Index: NextPage<Props> = ({
                         ${ tool.title === 'Typescript' && 'hover:scale-125 hover:text-[#007acc]' }
                         ${ tool.title === 'Github' && 'hover:scale-125 hover:text-black' }
                         ${ tool.title === 'Tailwind CSS' && 'hover:rotate-180 hover:scale-125 hover:text-[#38BDF8]' }
-                        ${ tool.title === 'Sass' && 'hover:scale-125 hover:text-[#CC6699]' }
+                        ${ tool.title === 'Sass' && 'hover:scale-125 hover:text-[#CC6699] ' }
                         ${ tool.title === 'Vercel' && 'hover:scale-125 hover:text-black' }
                       `
                     }}>
