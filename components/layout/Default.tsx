@@ -61,7 +61,7 @@ const Default: React.FC<Props> = ({
                     </section>
                 </main>
 
-                <button type="button" onClick={toggleDrawer} className="absolute left-4 top-4 bg-white w-12 h-12 z-50 shadow-md rounded-full flex sm:hidden items-center justify-center">
+                <button type="button" onClick={toggleDrawer} className="fixed left-8 top-8 bg-white w-12 h-12 z-50 shadow-md rounded-full flex sm:hidden items-center justify-center">
                     <HiMenuAlt2 />
                 </button>
                 <div className={`sm:hidden ${isDrawerOpen ? "translate-x-0" : "-translate-x-[120rem]"} transition-all duration-300 ease-in-out flex absolute shadow-xl left-0 top-0 bg-white h-screen items-start w-full justify-end`}>
