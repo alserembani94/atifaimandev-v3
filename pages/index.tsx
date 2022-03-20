@@ -1,6 +1,6 @@
 import { useLottie } from 'lottie-react';
 import {
-  GetServerSideProps, NextPage,
+  GetStaticProps, NextPage,
 } from 'next';
 import { IconContext } from 'react-icons';
 import Default from '../components/layout/Default';
@@ -11,7 +11,7 @@ interface Props {
   name: string;
 }
 
-export const getServerSideProps: GetServerSideProps<Props> = async (context) => {
+export const getStaticProps: GetStaticProps<Props> = async (context) => {
   return {
     props: {
       name: 'NextJS Starter Kit',
