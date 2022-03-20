@@ -17,7 +17,7 @@ const Sidebar: React.FC<Props> = ({
   const cta = getCta();
 
   return (
-    <section className="hidden sm:flex flex-col justify-end w-[250px] transition-all overflow-y-auto sticky top-0 left-0 max-h-[92vh] px-4 py-20 gap-8">
+    <section className="flex flex-col justify-end w-[250px] transition-all overflow-y-auto sticky top-0 left-0 max-h-[92vh] px-4 py-20 gap-8">
       <nav className="font-bold text-lg">
         <ul className="flex flex-col">
           {
