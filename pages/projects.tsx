@@ -42,8 +42,8 @@ const Projects: NextPage = () => {
               </div>
               <h2 className="text-2xl">{project.name}</h2>
               <p>Status: {project.launchStatus}</p>
-              <p>Role: {new Intl.ListFormat('en').format(project.role)}</p>
-              {/* <p>Role: {new Intl.ListFormat().format(project.role)}</p> */}
+              {/* <p>Role: {new Intl.ListFormat('en').format(project.role)}</p> */}
+              <p>Role: {project.role.join(', ')}</p>
               <p className="text-lg">{project.description}</p>
               <div className="flex flex-row flex-wrap gap-4">
                 {
