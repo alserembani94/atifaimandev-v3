@@ -26,7 +26,7 @@ export const getNavigation = () => {
     },
     {
       title: 'Blogs',
-      path: '/contact',
+      path: '/blogs',
     },
   ];
 }

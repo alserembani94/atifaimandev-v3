@@ -82,5 +82,3 @@ const Index: NextPage<Props> = ({
 };
 
 export default Index;
-
-// https://dev.to/api/articles?username=alserembani
