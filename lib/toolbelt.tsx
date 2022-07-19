@@ -39,7 +39,7 @@ export const getStylingStack = () => (['Tailwind CSS', 'SASS', 'PostCSS', 'Mater
 
 export const getBackendStack = () => (['Node.js', 'Express', 'MongoDB', 'Apollo GraphQL', 'Prisma', 'NestJS', 'Strapi'].map(item => getTools(item)));
 
-export const getOtherStack = () => (['Github', 'Jira', 'Gitlab', 'Vercel', 'Figma', 'Adobe XD', 'AWS Amplify', 'AWS', 'Docker', 'Kubernetes'].map(item => getTools(item)));
+export const getOtherStack = () => (['Github', 'Jira', 'Gitlab', 'Vercel', 'Figma', 'Adobe XD', 'AWS Amplify', 'AWS', 'Docker', 'Kubernetes', 'Google Cloud'].map(item => getTools(item)));
 
 export const getTools = (tool: string) => {
   switch(tool) {
