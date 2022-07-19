@@ -7,7 +7,7 @@ export const getJourney = () => {
       "activities": [
         {
           "milestone": "Mid React Developer @ Xsolla 👾",
-          "description": "One of the pixel builder of Xsolla, and currently working on Web3 technologies"
+          "description": "Being a part of leading gaming commerce player, and me being one of the pixel builder of Xsolla, and currently working on Web3 technologies for NFT and Metaverse 😉."
         }
       ]
     },
@@ -16,7 +16,7 @@ export const getJourney = () => {
       "activities": [
         {
           "milestone": "Application Developer @ toyyibPay (Aug)",
-          "description": "Extremely excited to work along with the new generation of toyyibPay 😉"
+          "description": "Malaysian payment gateway solution, one of the syariah compliant fintech company. Also one of the members behind NeoCorrad and infaqYIDE."
         }
       ]
     },
