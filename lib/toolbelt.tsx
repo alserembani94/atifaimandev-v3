@@ -176,7 +176,7 @@ export const getTools = (tool: string) => {
     case 'Kubernetes':
       return ({
         title: 'Docker',
-        icon: <SiDocker />,
+        icon: <SiKubernetes />,
       });
     case 'Google Cloud':
       return ({
