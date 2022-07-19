@@ -26,6 +26,7 @@ import {
   SiAmazonaws,
   SiDocker,
   SiKubernetes,
+  SiGooglecloud,
 } from 'react-icons/si';
 
 export const getToolbelt = () => (['React', 'Next.js', 'Typescript', 'Github', 'Tailwind CSS', 'Vercel'].map(item => getTools(item)));
@@ -174,8 +175,13 @@ export const getTools = (tool: string) => {
       });
     case 'Kubernetes':
       return ({
-        title: 'Kubernetes',
-        icon: <SiKubernetes />,
+        title: 'Docker',
+        icon: <SiDocker />,
+      });
+    case 'Google Cloud':
+      return ({
+        title: 'Google Cloud',
+        icon: <SiGooglecloud />,
       });
     default:
       return ({
