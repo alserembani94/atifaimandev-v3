@@ -3,6 +3,15 @@ import { getTools } from './toolbelt';
 export const getJourney = () => {
   return [
     {
+      "year": 2022,
+      "activities": [
+        {
+          "milestone": "Mid React Developer @ Xsolla 👾",
+          "description": "One of the pixel builder of Xsolla, and currently working on Web3 technologies"
+        }
+      ]
+    },
+    {
       "year": 2021,
       "activities": [
         {
