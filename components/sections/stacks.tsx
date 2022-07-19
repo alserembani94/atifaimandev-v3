@@ -141,6 +141,9 @@ const Stacks: React.FC = () => {
                     ${stack.title === 'Adobe XD' && 'hover:text-[#430134]'}
                     ${stack.title === 'AWS Amplify' && 'hover:text-[#F19100]'}
                     ${stack.title === 'AWS' && 'hover:text-[#F19100]'}
+                    ${stack.title === 'Docker' && 'hover:text-[#0db7ed]'}
+                    ${stack.title === 'Kubernetes' && 'hover:text-[#326ce5]'}
+                    ${stack.title === 'Google Cloud' && 'hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r from-[#4285F4] to-[#34A853]'}
                     `}>
                     {stack.icon}
                   </div>
