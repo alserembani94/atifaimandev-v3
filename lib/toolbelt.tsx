@@ -24,6 +24,8 @@ import {
   SiAdobexd,
   SiAwsamplify,
   SiAmazonaws,
+  SiDocker,
+  SiKubernetes,
 } from 'react-icons/si';
 
 export const getToolbelt = () => (['React', 'Next.js', 'Typescript', 'Github', 'Tailwind CSS', 'Vercel'].map(item => getTools(item)));
@@ -36,7 +38,7 @@ export const getStylingStack = () => (['Tailwind CSS', 'SASS', 'PostCSS', 'Mater
 
 export const getBackendStack = () => (['Node.js', 'Express', 'MongoDB', 'Apollo GraphQL', 'Prisma', 'NestJS', 'Strapi'].map(item => getTools(item)));
 
-export const getOtherStack = () => (['Github', 'Jira', 'Gitlab', 'Vercel', 'Figma', 'Adobe XD', 'AWS Amplify', 'AWS'].map(item => getTools(item)));
+export const getOtherStack = () => (['Github', 'Jira', 'Gitlab', 'Vercel', 'Figma', 'Adobe XD', 'AWS Amplify', 'AWS', 'Docker', 'Kubernetes'].map(item => getTools(item)));
 
 export const getTools = (tool: string) => {
   switch(tool) {
@@ -164,6 +166,16 @@ export const getTools = (tool: string) => {
       return ({
         title: 'AWS',
         icon: <SiAmazonaws />,
+      });
+    case 'Docker':
+      return ({
+        title: 'Docker',
+        icon: <SiDocker />,
+      });
+    case 'Kubernetes':
+      return ({
+        title: 'Kubernetes',
+        icon: <SiKubernetes />,
       });
     default:
       return ({
