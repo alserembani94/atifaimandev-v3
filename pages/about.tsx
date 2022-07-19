@@ -40,7 +40,7 @@ const About: NextPage = ({
       { View }
 
       <div className="text-center">
-        <Image src="https://scontent.fkul10-1.fna.fbcdn.net/v/t39.30808-6/240596486_4751712378180329_665901963832275019_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=wl0Ev_rlf9IAX_P-5xD&_nc_ht=scontent.fkul10-1.fna&oh=00_AT-s1sGjVviAFKpUXnexyotqhcPxCAEgk78o2BR53oq51w&oe=623C21CA" alt="Me" width={200} height={200} objectFit="contain" layout="intrinsic" className="rounded-full" />
+        <Image src="https://avatars.githubusercontent.com/u/41750858?v=4" alt="Atif Aiman in a golden Baju Melayu" width={200} height={200} objectFit="contain" layout="intrinsic" className="rounded-full" />
         <h1>My name is Atif Aiman,</h1>
         <h3>And this is about me!</h3>
       </div>
