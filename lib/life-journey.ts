@@ -125,11 +125,21 @@ export const getJourney = () => {
 
 export const getCareer = () => ([
   {
+    "company": "Xsolla",
+    "position": "Mid React Developer",
+    "url": "https://www.xsolla.com/",
+    "start": "May 2022",
+    "end": "Present",
+    "logo": "/logo/logo-xsolla.webp",
+    "description": "Develop high-end, pixel-perfect frontend components, while maintaining code qualities and CI/CD pipelines. Also working on web3 technologies such as Polygon and Solana.",
+    "stacks": ['React', 'Next.js', 'Typescript', 'Node.js', 'Tailwind CSS', 'Google Cloud', 'Docker', 'Kubernetes'].map(item => getTools(item)),
+  },
+  {
     "company": "toyyibPay Sdn. Bhd.",
     "position": "Application Developer",
-    "url": "https://www.toyyibpay.com/",
+    "url": "https://toyyibpay.com/",
     "start": "Aug 2021",
-    "end": "Present",
+    "end": "April 2022",
     "logo": "/logo/logo-toyyibpay.webp",
     "description": "Develop and maintain both legacy and new toyyibPay application. Also, work on toyyibPay's new features and improvements.",
     "stacks": ['React', 'Next.js', 'VueJS', 'NestJS', 'Typescript', 'Node.js', 'Tailwind CSS', 'AWS', 'AWS Amplify', 'Material UI'].map(item => getTools(item)),
