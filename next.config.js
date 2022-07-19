@@ -5,6 +5,7 @@ const nextConfig = {
     domains: [
       'scontent.fkul10-1.fna.fbcdn.net',
       'res.cloudinary.com',
+      'avatars.githubusercontent.com',
     ],
   },
 
