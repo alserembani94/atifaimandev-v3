@@ -16,6 +16,11 @@ const Page404: NextPage = ({}) => {
 
   const { View } = useLottie(options, style);
 
+  console.log(
+    "%cDid you just lost and try to find a way back through console? 👀",
+    "background: #222; color: #bada55"
+  );
+
   return (
     <Default title="Are you lost?">
       {View}

@@ -11,6 +11,16 @@ interface Props {
   mainClassName?: HTMLAttributes<HTMLElement>["className"];
 }
 
+const myFunComments = `
+<!--
+  It seems that you are currently
+  inspecting the element. You are
+  cool! A strong high five 🖐🏼.
+  Might as well look into my stash:
+  https://www.youtube.com/watch?v=xvFZjo5PgG0
+-->
+`;
+
 const Default: React.FC<Props> = ({
   children,
   title,
@@ -55,6 +65,11 @@ const Default: React.FC<Props> = ({
           key="twhandle"
         />
       </Head>
+      <div
+        dangerouslySetInnerHTML={{
+          __html: myFunComments,
+        }}
+      />
 
       <div className="bg-zinc-100 min-h-screen flex flex-col items-center">
         <main className="flex-1 flex flex-row justify-center items-start w-full max-w-5xl gap-8 relative">

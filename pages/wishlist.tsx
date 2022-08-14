@@ -9,6 +9,11 @@ export const getStaticProps: GetStaticProps = async (context) => {
 };
 
 const Wishlist: NextPage = () => {
+  console.log(
+    "%cDid you just peak into the console? 👀",
+    "background: #222; color: #bada55"
+  );
+
   const style = {
     height: 300,
   };

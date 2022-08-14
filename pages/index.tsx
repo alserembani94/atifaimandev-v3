@@ -28,6 +28,17 @@ const Index: NextPage = () => {
 
   const { View } = useLottie(options, style);
 
+  console.log(
+    "%cDid you just peak into the console? 👀",
+    "background: #222; color: #bada55"
+  );
+
+  console.log("%c Don't worry, I got ya! ", "background: #bada55; color: #222");
+  console.log(
+    "%c Listen to my jam music! \n https://www.youtube.com/watch?v=xvFZjo5PgG0 ",
+    "background: #bada55; color: #222"
+  );
+
   return (
     <Default title="The Home of atifaiman.dev">
       {View}

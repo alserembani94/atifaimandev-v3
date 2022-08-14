@@ -17,6 +17,11 @@ const Projects: NextPage = () => {
     height: 300,
   };
 
+  console.log(
+    "%cDid you just peak into the console? 👀",
+    "background: #222; color: #bada55"
+  );
+
   const options = {
     animationData: require("/animation/present.json"),
     loop: true,
