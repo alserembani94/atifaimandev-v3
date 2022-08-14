@@ -55,8 +55,8 @@ const Default: React.FC<Props> = ({
       </Head>
 
       <div className="bg-zinc-100 min-h-screen flex flex-col items-center">
-        <main className="flex-1 flex flex-row justify-center items-start w-full max-w-5xl gap-8">
-          <div className="hidden sm:flex">
+        <main className="flex-1 flex flex-row justify-center items-start w-full max-w-5xl gap-8 relative">
+          <div className="hidden sm:flex sticky top-0">
             <Sidebar />
           </div>
           <section className="flex-1 py-20 px-6 flex flex-col">

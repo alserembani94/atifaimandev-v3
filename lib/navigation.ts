@@ -13,20 +13,28 @@
 export const getNavigation = () => {
   return [
     {
-      title: 'Home',
-      path: '/',
+      title: "Home",
+      path: "/",
     },
     {
-      title: 'About Me',
-      path: '/about',
+      title: "About Me",
+      path: "/about",
     },
     {
-      title: 'Projects',
-      path: '/projects',
+      title: "Projects",
+      path: "/projects",
     },
     {
-      title: 'Blogs',
-      path: '/blogs',
+      title: "Wishlist",
+      path: "/wishlist",
+    },
+    {
+      title: "Blogs",
+      path: "/blogs",
+    },
+    {
+      title: "Venture into Forest",
+      path: "/venture-into-forest",
     },
   ];
-}
+};
