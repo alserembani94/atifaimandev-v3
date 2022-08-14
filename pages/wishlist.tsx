@@ -22,7 +22,7 @@ const Wishlist: NextPage = () => {
   const { View } = useLottie(options, style);
 
   return (
-    <Default>
+    <Default title="My Wishlist">
       {View}
       <div className="text-center my-8">
         <h1>My Wishlist</h1>

@@ -26,7 +26,7 @@ const Projects: NextPage = () => {
   const { View } = useLottie(options, style);
 
   return (
-    <Default>
+    <Default title="My Projects">
       {View}
       <h1 className="text-center mb-8">Projects</h1>
       <div className="flex flex-col gap-12 text-center">

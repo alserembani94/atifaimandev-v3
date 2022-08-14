@@ -29,7 +29,7 @@ const Index: NextPage = () => {
   const { View } = useLottie(options, style);
 
   return (
-    <Default>
+    <Default title="The Home of atifaiman.dev">
       {View}
       <div className="text-center my-8">
         <h4>Salam and hello everyone!</h4>

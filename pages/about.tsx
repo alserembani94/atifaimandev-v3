@@ -26,7 +26,7 @@ const About: NextPage = ({}) => {
   const { View } = useLottie(options, style);
 
   return (
-    <Default>
+    <Default title="About Me">
       {View}
 
       <div className="text-center">

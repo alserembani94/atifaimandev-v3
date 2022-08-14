@@ -13,15 +13,17 @@ interface Props {
 
 const Default: React.FC<Props> = ({
   children,
-  title = "atifaiman.dev",
+  title,
   description = "A place for my canvas of code, try everything I could think of to improve my skill continuously.",
-  imageURL = "/images/banner.png",
+  imageURL = "https://atifaiman.dev/images/banner.png",
 }) => {
   const [isDrawerOpen, setDrawerOpen] = useState(false);
 
   const openDrawer = () => setDrawerOpen(true);
   const closeDrawer = () => setDrawerOpen(false);
   const toggleDrawer = () => setDrawerOpen((prev) => !prev);
+
+  const modifiedTitle = title ? `${title} | atifaiman.dev` : "atifaiman.dev";
 
   return (
     <>
@@ -32,18 +34,18 @@ const Default: React.FC<Props> = ({
         <link rel="icon" href="/favicon.ico" />
 
         {/* Basic information */}
-        <title>{title}</title>
+        <title>{modifiedTitle}</title>
         <meta name="description" content={description} />
 
         {/* Open Graph */}
-        <meta property="og:title" content={title} />
+        <meta property="og:title" content={modifiedTitle} />
         <meta property="og:description" content={description} />
         <meta property="og:image" content={imageURL} />
         <meta property="og:site_name" content="atifaiman.dev" />
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary" key="twcard" />
-        <meta property="twitter:title" content={title} />
+        <meta property="twitter:title" content={modifiedTitle} />
         <meta property="twitter:description" content={description} />
         <meta property="twitter:image" content={imageURL} />
         <meta property="twitter:site" content="@alserembani" />
