@@ -1,30 +1,30 @@
 import { getTool } from "./toolbelt";
 
 const projects = [
-  {
-    name: "Glosawam",
-    role: ["Full Stack Developer", "Project Manager"],
-    description:
-      "A public glossary for the crowd translation community for scientific and technology terms.",
-    tenure: "Personal",
-    dateStart: "2019-01-01",
-    launchStatus: "Development",
-    logoURL: "/vercel.svg",
-    url: "https://glosawam.vercel.app/",
-    stacks: [
-      "Next.js",
-      "Typescript",
-      "Tailwind CSS",
-      "Material UI",
-      "Node.js",
-      "AWS Amplify",
-    ].map((item) => getTool(item)),
-  },
+//   {
+//     name: "Glosawam",
+//     role: ["Full Stack Developer", "Project Manager"],
+//     description:
+//       "A public glossary for the crowd translation community for scientific and technology terms.",
+//     tenure: "Personal",
+//     dateStart: "2019-01-01",
+//     launchStatus: "Development",
+//     logoURL: "/vercel.svg",
+//     url: "https://glosawam.vercel.app/",
+//     stacks: [
+//       "Next.js",
+//       "Typescript",
+//       "Tailwind CSS",
+//       "Material UI",
+//       "Node.js",
+//       "AWS Amplify",
+//     ].map((item) => getTool(item)),
+//   },
   {
     name: "InfaqYIDE",
     role: ["Frontend Developer", "Project Manager"],
     description:
-      "React Native app to allow donation to charity registered under Yayasan Islam Darul Ehsan.",
+      "React Native app to allow donation to several Islamic institution listed and registered under Yayasan Islam Darul Ehsan.",
     tenure: "Company - toyyibPay Sdn. Bhd.",
     dateStart: "2019-01-01",
     launchStatus: "Launched",
@@ -95,7 +95,7 @@ const projects = [
     name: "Tahqeeq - Quran Authentication App",
     role: ["React Native Developer", "Full Stack Developer"],
     description:
-      "React Native app to plan your budgeting and credit card management.",
+      "React Native app to autheticate the Quranic verse that is being used in other sources.",
     tenure: "Personal",
     dateStart: "2019-01-01",
     launchStatus: "Terminated",
