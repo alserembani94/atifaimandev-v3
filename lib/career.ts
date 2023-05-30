@@ -9,7 +9,7 @@ const career = [
     end: "Present",
     logo: "/logo/logo-xsolla.webp",
     description:
-      "Develop high-end, pixel-perfect frontend components, while maintaining code qualities and CI/CD pipelines. Also working on web3 technologies such as Polygon and Solana.",
+      "Develop high-end, pixel-perfect frontend components, while maintaining code qualities and CI/CD pipelines. Also working on web3 technologies such as Polygon and Solana. And also, working on Babka, a player's inventory across games and metaverse.",
     stacks: [
       "React",
       "Next.js",
@@ -80,7 +80,7 @@ const career = [
     end: "May 2019",
     logo: "/logo/logo-um.webp",
     description:
-      "Developing an app Tahqeeq: Quran Authenticator - checking Quran authenticity. Using React Native ⚛.",
+      "Developing an app Tahqeeq: Quran Authenticator - checking authenticity of Quranic verses in non-Quran sources. Using React Native ⚛.",
     stacks: ["React", "Ant Design"].map((item) => getTool(item)),
   },
   {
