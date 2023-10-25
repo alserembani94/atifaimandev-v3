@@ -3,7 +3,8 @@ import { NextPage, GetStaticProps } from "next";
 import Default from "../components/layout/Default";
 import { getProjects } from "../lib/projects";
 import Image from "next/image";
-import { IconContext } from "react-icons";
+import { twMerge } from "@/lib/helpers";
+import { useEffect } from "react";
 
 export const getStaticProps: GetStaticProps = async (context) => {
   return {
@@ -17,13 +18,15 @@ const Projects: NextPage = () => {
     height: 300,
   };
 
-  console.log(
-    "%cDid you just peak into the console? 👀",
-    "background: #222; color: #bada55"
-  );
+  useEffect(() => {
+    console.log(
+      "%cDid you just peak into the console? 👀",
+      "background: #222; color: #bada55"
+    );
+  }, []);
 
   const options = {
-    animationData: require("/animation/present.json"),
+    animationData: require("../animation/present.json"),
     loop: true,
     autoplay: true,
   };
@@ -41,26 +44,22 @@ const Projects: NextPage = () => {
               <Image
                 src={project.logoURL}
                 alt={project.name}
-                layout="fill"
-                className="relative w-16 h-16"
-                objectFit="contain"
+                fill
+                sizes="64px"
+                className="relative w-16 h-16 object-contain"
               />
             </div>
             <h2 className="text-2xl">{project.name}</h2>
             <p>Status: {project.launchStatus}</p>
-            {/* <p>Role: {new Intl.ListFormat('en').format(project.role)}</p> */}
             <p>Role: {project.role.join(", ")}</p>
             <p className="text-lg">{project.description}</p>
             <div className="flex flex-row flex-wrap gap-4">
               {project.stacks.map(
                 (tool) =>
                   tool && (
-                    <IconContext.Provider
-                      value={{ className: "w-8 h-8 text-slate-500" }}
-                      key={project.name + tool.title}
-                    >
+                    <div data-tool={tool.id} className={twMerge("text-3xl text-slate-500 transition-all", tool.className)} key={project.name + tool.title}>
                       {tool.icon}
-                    </IconContext.Provider>
+                    </div>
                   )
               )}
             </div>

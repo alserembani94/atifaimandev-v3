@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { IconContext } from "react-icons";
 import { getCta } from "../../lib/cta";
 import { getNavigation } from "../../lib/navigation";
 import Image from 'next/image';
@@ -18,7 +17,7 @@ const Sidebar: React.FC<Props> = ({
 
   return (
     <section className="flex flex-col justify-end w-[250px] transition-all overflow-y-auto sticky top-0 left-0 max-h-[92vh] px-4 py-20 gap-8">
-      <nav data-funny={true} className="font-bold text-lg data-[funny=true]:bg-black">
+      <nav className="font-bold text-lg">
         <ul className="flex flex-col">
           {
             navigation.map((item, index) => (
@@ -36,24 +35,21 @@ const Sidebar: React.FC<Props> = ({
         {
           cta.map((item, index) => (
             <a key={item.title} rel="noopener noreferrer" target="_blank" href={item.href}>
-              <IconContext.Provider value={{ className: "w-8 h-8 text-slate-500 hover:text-slate-900 p-1 transition-all duration-300 ease-in-out" }}>
+              <div className="text-2xl text-slate-500 hover:text-slate-900 p-1 transition-all duration-300 ease-in-out">
                 {item.icon}
-              </IconContext.Provider>
+              </div>
             </a>
           ))
         }
       </div>
-      <div className="relative">
-        <Link href="/buymeacoffee" target="_blank" rel="noopener noreferrer" id="buymeacoffee" className="relative">
+      <div className="relative flex">
+        <Link href="/buymeacoffee" target="_blank" rel="noopener noreferrer" id="buymeacoffee" className="relative w-full h-16" as="/buymeacoffee">
           <Image
             src="/images/button_buymeacoffee.png"
             alt="Buy me a coffee!"
-            width={200}
-            height={50}
-            layout="responsive"
-            objectFit="cover"
-            objectPosition="center"
-            className="rounded-md"
+            fill
+            sizes="100px"
+            className="relative rounded-md object-cover"
           />
         </Link>
       </div>

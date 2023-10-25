@@ -87,9 +87,8 @@ const Default: React.FC<Props> = ({
           <HiMenuAlt2 />
         </button>
         <div
-          className={`sm:hidden ${
-            isDrawerOpen ? "translate-x-0" : "-translate-x-[120rem]"
-          } transition-all duration-300 ease-in-out flex fixed shadow-xl left-0 top-0 bg-white h-screen items-start w-full justify-end`}
+        data-drawer={isDrawerOpen}
+          className="sm:hidden transition-all duration-300 ease-in-out flex fixed shadow-xl left-0 top-0 bg-white h-screen items-start w-full justify-end data-[drawer=true]:translate-x-0 data-[drawer=false]:translate-x-[120rem]"
         >
           <Sidebar />
         </div>

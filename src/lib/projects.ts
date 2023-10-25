@@ -1,25 +1,6 @@
 import { getTool } from "./toolbelt";
 
 const projects = [
-//   {
-//     name: "Glosawam",
-//     role: ["Full Stack Developer", "Project Manager"],
-//     description:
-//       "A public glossary for the crowd translation community for scientific and technology terms.",
-//     tenure: "Personal",
-//     dateStart: "2019-01-01",
-//     launchStatus: "Development",
-//     logoURL: "/vercel.svg",
-//     url: "https://glosawam.vercel.app/",
-//     stacks: [
-//       "Next.js",
-//       "Typescript",
-//       "Tailwind CSS",
-//       "Material UI",
-//       "Node.js",
-//       "AWS Amplify",
-//     ].map((item) => getTool(item)),
-//   },
   {
     name: "InfaqYIDE",
     role: ["Frontend Developer", "Project Manager"],

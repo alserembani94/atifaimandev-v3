@@ -1,11 +1,21 @@
 const journey = [
   {
+    year: 2023,
+    activities: [
+      {
+        milestone: "Senior Frontend Developer @ Decube 🧊",
+        description:
+          "Reimagine the UI/UX of Data Observability dashboard, and also in charge of setting up the frontend architecture, CI/CD pipelines, and also the frontend team.",
+      },
+    ],
+  },
+  {
     year: 2022,
     activities: [
       {
         milestone: "Mid React Developer @ Xsolla 👾",
         description:
-          "Being a part of leading gaming commerce player, and me being one of the pixel builder of Xsolla, and currently working on Web3 technologies for NFT and Metaverse 😉.",
+          "Being a part of leading gaming commerce player, and me being one of the pixel builder of Xsolla, and working on Web3 technologies for NFT and Metaverse 😉.",
       },
     ],
   },

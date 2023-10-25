@@ -2,7 +2,7 @@ import {
   SiGithub,
   SiGmail,
   SiLinkedin,
-  SiTwitter,
+  SiX,
 } from 'react-icons/si';
 
 export const getCta = () => {
@@ -23,9 +23,9 @@ export const getCta = () => {
       icon: <SiLinkedin />,
     },
     {
-      title: 'Twitter',
+      title: 'Twitter / X',
       href: 'https://twitter.com/alserembani',
-      icon: <SiTwitter />,
+      icon: <SiX />,
     },
   ];
 

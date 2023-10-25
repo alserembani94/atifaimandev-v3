@@ -5,6 +5,7 @@ import { MdOpenInNew } from "react-icons/md";
 import Stacks from "../components/sections/stacks";
 import Career from "../components/sections/career";
 import Image from "next/image";
+import { useEffect } from "react";
 
 export const getStaticProps: GetStaticProps = async (context) => {
   return {
@@ -13,17 +14,19 @@ export const getStaticProps: GetStaticProps = async (context) => {
 };
 
 const About: NextPage = ({}) => {
-  console.log(
-    "%cDid you just peak into the console? 👀",
-    "background: #222; color: #bada55"
-  );
+  useEffect(() => {
+    console.log(
+      "%cDid you just peak into the console? 👀",
+      "background: #222; color: #bada55"
+    );
+  }, []);
 
   const style = {
     height: 300,
   };
 
   const options = {
-    animationData: require("/animation/study.json"),
+    animationData: require("../animation/study.json"),
     loop: true,
     autoplay: true,
   };
@@ -34,14 +37,12 @@ const About: NextPage = ({}) => {
     <Default title="About Me">
       {View}
 
-      <div className="text-center">
+      <div className="text-center flex flex-col items-center">
         <Image
           src="https://avatars.githubusercontent.com/u/41750858"
           alt="Atif Aiman in a golden Baju Melayu"
           width={200}
           height={200}
-          objectFit="contain"
-          layout="intrinsic"
           className="rounded-full"
         />
         <h1>My name is Atif Aiman,</h1>

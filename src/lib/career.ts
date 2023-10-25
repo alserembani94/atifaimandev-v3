@@ -16,7 +16,7 @@ const career = [
       "Typescript",
       "Node.js",
       "Tailwind CSS",
-      "Google Cloud",
+      "Github"
     ].map((item) => getTool(item)),
   },
   {

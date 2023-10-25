@@ -4,6 +4,7 @@ import Default from "../components/layout/Default";
 import Image from "next/image";
 import { IoMdHeart } from "react-icons/io";
 import { FaCommentAlt } from "react-icons/fa";
+import { useEffect } from "react";
 
 type BlogData = {
   canonical_url: string;
@@ -44,17 +45,19 @@ export const getStaticProps: GetStaticProps<Props> = async (context) => {
 };
 
 const Blogs: NextPage<Props> = ({ data }) => {
-  console.log(
-    "%cDid you just peak into the console? 👀",
-    "background: #222; color: #bada55"
-  );
+  useEffect(() => {
+    console.log(
+      "%cDid you just peak into the console? 👀",
+      "background: #222; color: #bada55"
+    );
+  }, []);
 
   const style = {
     height: 300,
   };
 
   const options = {
-    animationData: require("/animation/reading.json"),
+    animationData: require("../animation/reading.json"),
     loop: true,
     autoplay: true,
   };
@@ -79,8 +82,9 @@ const Blogs: NextPage<Props> = ({ data }) => {
                 <Image
                   src={blog.cover_image}
                   alt={blog.title}
-                  layout="fill"
-                  objectFit="cover"
+                  fill
+                  sizes="64px"
+                  className="object-cover object-center"
                 />
               </div>
             ) : (

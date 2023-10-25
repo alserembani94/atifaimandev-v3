@@ -2,6 +2,7 @@ import { useLottie } from "lottie-react";
 import { NextPage } from "next";
 import Link from "next/link";
 import Default from "../components/layout/Default";
+import { useEffect } from "react";
 
 const Page404: NextPage = ({}) => {
   const style = {
@@ -9,17 +10,20 @@ const Page404: NextPage = ({}) => {
   };
 
   const options = {
-    animationData: require("/animation/lost-in-forest.json"),
+    animationData: require("../animation/lost-in-forest.json"),
     loop: true,
     autoplay: true,
   };
 
   const { View } = useLottie(options, style);
 
-  console.log(
-    "%cDid you just lost and try to find a way back through console? 👀",
-    "background: #222; color: #bada55"
-  );
+  useEffect(() => {
+    console.log(
+      "%cDid you just lost and try to find a way back through console? 👀",
+      "background: #222; color: #bada55"
+    );
+  }, []);
+
 
   return (
     <Default title="Are you lost?">
