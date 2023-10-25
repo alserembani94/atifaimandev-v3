@@ -28,9 +28,7 @@ const Default: React.FC<Props> = ({
   imageURL = "https://atifaiman.dev/images/banner.png",
 }) => {
   const [isDrawerOpen, setDrawerOpen] = useState(false);
-
-  const openDrawer = () => setDrawerOpen(true);
-  const closeDrawer = () => setDrawerOpen(false);
+  
   const toggleDrawer = () => setDrawerOpen((prev) => !prev);
 
   const modifiedTitle = title ? `${title} | atifaiman.dev` : "atifaiman.dev";

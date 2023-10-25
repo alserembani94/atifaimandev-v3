@@ -2,11 +2,29 @@ import { getTool } from "./toolbelt";
 
 const career = [
   {
+    company: "Decube",
+    position: "Senior Frontend Developer",
+    url: "https://www.decube.io/",
+    start: "September 2023",
+    end: "Present",
+    logo: "/logo/logo-decube.webp",
+    description:
+      "Developing the data observability dashboard. In charge in setting up the frontend architecture, CI/CD pipelines, and also the frontend team.",
+    stacks: [
+      "React",
+      "Next.js",
+      "Typescript",
+      "Node.js",
+      "Tailwind CSS",
+      "Google Cloud",
+    ].map((item) => getTool(item)),
+  },
+  {
     company: "Xsolla",
     position: "Mid React Developer",
     url: "https://www.xsolla.com/",
     start: "May 2022",
-    end: "Present",
+    end: "August 2023",
     logo: "/logo/logo-xsolla.webp",
     description:
       "Develop high-end, pixel-perfect frontend components, while maintaining code qualities and CI/CD pipelines. Also working on web3 technologies such as Polygon and Solana. And also, working on Babka, a player's inventory across games and metaverse.",

@@ -9,7 +9,7 @@ module.exports = {
     extend: {},
   },
   plugins: [
-    plugin(function({ addBase, theme }) {
+    plugin(function ({ addBase, theme }) {
       addBase({
         body: {
           fontFamily: theme("fontFamily.sans"),

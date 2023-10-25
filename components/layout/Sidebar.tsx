@@ -18,32 +18,13 @@ const Sidebar: React.FC<Props> = ({
 
   return (
     <section className="flex flex-col justify-end w-[250px] transition-all overflow-y-auto sticky top-0 left-0 max-h-[92vh] px-4 py-20 gap-8">
-      <nav className="font-bold text-lg">
+      <nav data-funny={true} className="font-bold text-lg data-[funny=true]:bg-black">
         <ul className="flex flex-col">
           {
             navigation.map((item, index) => (
               <li key={item.title + index}>
-                <Link href={item.path}>
-                  <a className={`
-                    border-r-4
-                    border-black
-                    hover:border-blue-500
-                    text-black
-                    hover:text-blue-500
-                    flex
-                    flex-row
-                    gap-4
-                    justify-end
-                    transition-all
-                    duration-300
-                    ease-in-out
-                    text-right
-                    pr-6
-                    py-2
-                    ${ pathname === item.path && 'border-blue-800 text-blue-800' }
-                  `}>
-                    {item.title}
-                  </a>
+                <Link href={item.path} data-active={pathname === item.path} className="border-r-4 border-black hover:border-blue-500 text-black hover:text-blue-500 flex flex-row gap-4 justify-end transition-all duration-300 ease-in-out text-right pr-6 py-2 data-[active=true]:border-blue-800 data-[active=true]:text-blue-800">
+                  {item.title}
                 </Link>
               </li>
             ))
@@ -63,19 +44,17 @@ const Sidebar: React.FC<Props> = ({
         }
       </div>
       <div className="relative">
-        <Link href="/buymeacoffee">
-          <a target="_blank" rel="noopener noreferrer" id="buymeacoffee" className="relative">
-            <Image
-              src="/images/button_buymeacoffee.png"
-              alt="Buy me a coffee!"
-              width={200}
-              height={50}
-              layout="responsive"
-              objectFit="cover"
-              objectPosition="center"
-              className="rounded-md"
-            />
-          </a>
+        <Link href="/buymeacoffee" target="_blank" rel="noopener noreferrer" id="buymeacoffee" className="relative">
+          <Image
+            src="/images/button_buymeacoffee.png"
+            alt="Buy me a coffee!"
+            width={200}
+            height={50}
+            layout="responsive"
+            objectFit="cover"
+            objectPosition="center"
+            className="rounded-md"
+          />
         </Link>
       </div>
     </section>
