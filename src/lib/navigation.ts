@@ -12,10 +12,10 @@ export const getNavigation = () => {
       title: "Projects",
       path: "/projects",
     },
-    {
-      title: "Wishlist",
-      path: "/wishlist",
-    },
+    // {
+    //   title: "Wishlist",
+    //   path: "/wishlist",
+    // },
     {
       title: "Blogs",
       path: "/blogs",
