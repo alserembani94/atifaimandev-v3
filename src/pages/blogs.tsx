@@ -83,7 +83,7 @@ const Blogs: NextPage<Props> = ({ data }) => {
                   src={blog.cover_image}
                   alt={blog.title}
                   fill
-                  sizes="64px"
+                  sizes="200px"
                   className="object-cover object-center"
                 />
               </div>
