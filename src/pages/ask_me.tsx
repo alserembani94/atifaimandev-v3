@@ -10,6 +10,7 @@ import { useRef } from 'react';
 import { MdOpenInNew } from 'react-icons/md';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import axios from 'axios';
 
 export const getStaticProps: GetStaticProps = async (context) => {
   return {
@@ -18,7 +19,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
 };
 
 const AskMe: NextPage = () => {
-  const router = useRouter();
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const style = {
     height: 300,
@@ -37,7 +37,10 @@ const AskMe: NextPage = () => {
     const question = inputRef.current?.value;
     if (question) {
       try {
-        console.log(router.pathname);
+        await axios.post('/api/questions', {
+          question,
+        });
+        
         toast("Your question has been successfully posted!", {
           position: 'top-center',
           type: 'success',
@@ -93,6 +96,7 @@ const AskMe: NextPage = () => {
               check it out
               <MdOpenInNew />
             </a>
+            . The answer will be published on my 𝕏 (previously Twitter).
           </p>
         </form>
       </section>

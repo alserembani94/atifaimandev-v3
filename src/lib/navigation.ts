@@ -21,6 +21,10 @@ export const getNavigation = () => {
       path: "/blogs",
     },
     {
+      title: "Ask me anything",
+      path: "/ask_me"
+    },
+    {
       title: "Venture into Forest",
       path: "/venture-into-forest",
     },
