@@ -51,26 +51,48 @@ const AMA: NextPage = () => {
     window.open(twitterUrl, '_blank');
   };
 
+  // Get the user's time zone offset in minutes
+  const userTimeZoneOffset = new Date().getTimezoneOffset();
+
+  // Calculate the user's time zone offset in milliseconds
+  const userTimeZoneOffsetMs = userTimeZoneOffset * 60 * 1000;
+
   return (
     <Default title="The Home of atifaiman.dev">
       {View}
       <h1 className="text-center mb-4">AMA List</h1>
       <section className="flex flex-col gap-4">
         {
-          questions.map((question: any) => (
-            <div data-answered={question.status.toString()} className="bg-white data-[answered=true]:opacity-50 rounded-lg p-4 gap-4 flex flex-row items-center w-full" key={`question-${question.id}`}>
-              <div className="flex-1 flex flex-col gap-2">
-                <div className="flex flex-row gap-2 items-center">
-                  <div data-answered={question.status.toString()} className="w-6 h-2 rounded-full bg-slate-200 data-[answered=true]:bg-green-700" />
-                  <p>{new Intl.DateTimeFormat('ms-MY', { year: "2-digit", month: "short", day: "numeric", hour: "2-digit", minute: "2-digit", hour12: false }).format(question.postedon)}</p>
+          questions.map((question: any) => {
+            const postedDate = new Date(question.postedon);
+            // const formattedDate = postedDate.toLocaleString(undefined, {
+            //   year: '2-digit',
+            //   month: 'short',
+            //   day: 'numeric',
+            //   hour: '2-digit',
+            //   minute: '2-digit',
+            //   hour12: false,
+            //   timeZoneName: 'short'
+            // });
+
+            const adjustedDate = new Date(postedDate.getTime() - userTimeZoneOffsetMs);
+
+            return (
+              <div data-answered={question.status.toString()} className="bg-white data-[answered=true]:opacity-50 rounded-lg p-4 gap-4 flex flex-row items-center w-full" key={`question-${question.id}`}>
+                <div className="flex-1 flex flex-col gap-2">
+                  <div className="flex flex-row gap-2 items-center">
+                    <div data-answered={question.status.toString()} className="w-6 h-2 rounded-full bg-slate-200 data-[answered=true]:bg-green-700" />
+                    {/* <p>{formattedDate}</p> */}
+                    <p>{new Intl.DateTimeFormat('ms-MY', { year: "2-digit", month: "short", day: "numeric", hour: "2-digit", minute: "2-digit", hour12: false, timeZoneName: "longOffset" }).format(adjustedDate)}</p>
+                  </div>
+                  <p>{question.question}</p>
                 </div>
-                <p>{question.question}</p>
+                <button className="flex flex-row gap-2 items-center px-8 py-2 rounded-full bg-gradient-to-r from-blue-500 to-blue-700 text-white font-semibold" onClick={() => handleAnswer(question)}>
+                  <span>Answer</span>
+                </button>
               </div>
-              <button className="flex flex-row gap-2 items-center px-8 py-2 rounded-full bg-gradient-to-r from-blue-500 to-blue-700 text-white font-semibold" onClick={() => handleAnswer(question)}>
-                <span>Answer</span>
-              </button>
-            </div>
-          ))
+            )
+          })
         }
       </section>
       <ToastContainer />
