@@ -62,7 +62,7 @@ const AMA: NextPage = () => {
               <div className="flex-1 flex flex-col gap-2">
                 <div className="flex flex-row gap-2 items-center">
                   <div data-answered={question.status.toString()} className="w-6 h-2 rounded-full bg-slate-200 data-[answered=true]:bg-green-700" />
-                  <p>{new Intl.DateTimeFormat('ms-MY', { year: "2-digit", month: "short", day: "numeric", hour: "2-digit", minute: "2-digit", hour12: false }).format(question.postedOn)}</p>
+                  <p>{new Intl.DateTimeFormat('ms-MY', { year: "2-digit", month: "short", day: "numeric", hour: "2-digit", minute: "2-digit", hour12: false }).format(question.postedon)}</p>
                 </div>
                 <p>{question.question}</p>
               </div>
