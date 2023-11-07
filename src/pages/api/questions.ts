@@ -6,7 +6,7 @@ export default async function handler(
   response: NextApiResponse,
 ) {
   if (request.method === 'GET') {
-    const questions = await sql`SELECT * FROM Questions LIMIT 100;`;
+    const questions = await sql`SELECT * FROM Questions ORDER BY id DESC LIMIT 100;`;
     return response.status(200).json({ questions });
   }
 

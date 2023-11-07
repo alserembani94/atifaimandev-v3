@@ -14,7 +14,7 @@ const Modal = ({ onClose, children }: ModalProps) => {
   };
 
   const modalContent = (
-    <div className="absolute w-screen h-screen bg-[#00000055] top-0 flex items-center justify-center">
+    <div className="fixed w-screen h-screen bg-[#00000055] top-0 flex items-center justify-center">
       <div className="w-full max-w-md bg-white rounded-lg p-4">
         <div className="modal-header">
           <button onClick={handleCloseClick}>
