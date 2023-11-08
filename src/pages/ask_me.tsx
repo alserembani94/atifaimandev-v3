@@ -6,8 +6,9 @@ import {
 } from 'next';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { MdOpenInNew } from 'react-icons/md';
+import { CgSpinner } from 'react-icons/cg';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
@@ -19,6 +20,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 };
 
 const AskMe: NextPage = () => {
+  const [loading, setLoading] = useState(false);
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const style = {
     height: 300,
@@ -34,6 +36,7 @@ const AskMe: NextPage = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setLoading(true);
     const question = inputRef.current?.value;
     if (question) {
       try {
@@ -53,6 +56,7 @@ const AskMe: NextPage = () => {
           type: 'error',
         });
       }
+      setLoading(false);
     }
   }
 
@@ -83,7 +87,14 @@ const AskMe: NextPage = () => {
 
           {/* Duplicate the bottom button, but change the gradient to my blue shade */}
           <button type="submit" className="w-full px-12 py-3 rounded-full bg-gradient-to-r from-blue-500 to-blue-700 text-white font-semibold">
-            Ask Atif!
+          {loading ? (
+              <div className="flex items-center justify-center space-x-2">
+                <CgSpinner className="animate-spin" />
+                <span>Submitting...</span>
+              </div>
+            ) : (
+              "Ask Atif!"
+          )}
           </button>
           <p className="p-4 bg-slate-200 rounded">
             This Q&A is totally anonymous. I didn&apos;t collect any data whatsoever other than the question itself. You can head to the codebase and&nbsp; 
