@@ -10,6 +10,7 @@ import { useQuery } from '@tanstack/react-query';
 import * as htmlToImage from 'html-to-image';
 import { useRef, useState } from 'react';
 import Modal from '@/components/Modal';
+import { Question } from '@/types/question';
 
 const AMA: NextPage = () => {
   const amaCardRef = useRef<HTMLDivElement>(null);
@@ -34,9 +35,23 @@ const AMA: NextPage = () => {
 
   const { View } = useLottie(options, style);
 
-  const handleAnswer = (questionItem: unknown) => {
+  const handleRead = async (questionItem: Question) => {
+    try {
+      await axios.put('/api/questions', {
+        id: questionItem.id,
+      })
+    } catch (error) {
+      toast("something went wrong, please try again later", {
+        position: 'top-center',
+        type: 'error',
+      });
+    }
+  };
+
+  const handleAnswer = (questionItem: Question) => {
     setSelectedQuestion(questionItem);
-  }
+    handleRead(questionItem);
+  };
 
   const saveHandler = async () => {
     const image = await htmlToImage.toPng(amaCardRef.current!);
@@ -65,24 +80,14 @@ const AMA: NextPage = () => {
         {
           questions.map((question: any) => {
             const postedDate = new Date(question.postedon);
-            // const formattedDate = postedDate.toLocaleString(undefined, {
-            //   year: '2-digit',
-            //   month: 'short',
-            //   day: 'numeric',
-            //   hour: '2-digit',
-            //   minute: '2-digit',
-            //   hour12: false,
-            //   timeZoneName: 'short'
-            // });
 
             const adjustedDate = new Date(postedDate.getTime() - userTimeZoneOffsetMs);
 
             return (
-              <div data-answered={question.status.toString()} className="bg-white data-[answered=true]:opacity-50 rounded-lg p-4 gap-4 flex flex-row items-center w-full" key={`question-${question.id}`}>
+              <div data-answered={question.status.toString()} className="bg-white data-[answered=true]:opacity-50 rounded-lg p-4 gap-4 flex flex-col md:flex-row items-center w-full" key={`question-${question.id}`}>
                 <div className="flex-1 flex flex-col gap-2">
                   <div className="flex flex-row gap-2 items-center">
                     <div data-answered={question.status.toString()} className="w-6 h-2 rounded-full bg-slate-200 data-[answered=true]:bg-green-700" />
-                    {/* <p>{formattedDate}</p> */}
                     <p>{new Intl.DateTimeFormat('ms-MY', { year: "2-digit", month: "short", day: "numeric", hour: "2-digit", minute: "2-digit", hour12: false, timeZoneName: "longOffset" }).format(adjustedDate)}</p>
                   </div>
                   <p>{question.question}</p>
@@ -118,3 +123,43 @@ const AMA: NextPage = () => {
 };
 
 export default AMA;
+
+
+
+// import React, { FC, ReactNode } from 'react';
+
+// interface MyComponentProps<T> {
+//   options: T[];
+//   renderFunction: (option: T) => ReactNode;
+//   defaultedSearch: T;
+// }
+
+// const MyComponent = <T,>({
+//   options,
+//   renderFunction,
+//   defaultedSearch,
+// }: MyComponentProps<T>): JSX.Element => {
+//   // Your component logic here
+//   return (
+//     <div>
+//       {/* Example usage of options and renderFunction */}
+//       {options.map((option) => renderFunction(option))}
+//       {/* Example usage of defaultedSearch */}
+//       <div>{renderFunction(defaultedSearch)}</div>
+//     </div>
+//   );
+// };
+
+// const Parent = () => {
+//   return (
+//     <DateRender configuration={{ date: "2023-01-01", end_date: '2023-01-04' }} />
+//     // <MyComponent options={['a', 'b', 'c']} renderFunction={(option) => <div>{option}</div>} defaultedSearch="a" />
+//     // <MyComponent options={[1, 2, 3]} renderFunction={(option) => <div>{option}</div>} defaultedSearch={1} />
+//   );
+// }
+
+// Example usage with strings
+{/* <MyComponent options={['a', 'b', 'c']} renderFunction={(option) => <div>{option}</div>} defaultedSearch="a" /> */}
+
+// Example usage with numbers
+{/* <MyComponent options={[1, 2, 3]} renderFunction={(option) => <div>{option}</div>} defaultedSearch={1} /> */}

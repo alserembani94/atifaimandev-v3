@@ -12,13 +12,11 @@ export default async function handler(
 
   if (request.method === 'POST') {
     try {
-      console.log(request.body);
       const question = request.body.question as string;
       if (!question) throw new Error('question required');
       const timestamp = new Date().toISOString();
       await sql`INSERT INTO Questions (question, postedOn, status) VALUES (${question}, ${timestamp}, false);`;
     } catch (error) {
-      console.log(error);
       return response.status(500).json({ error });
     }
    
