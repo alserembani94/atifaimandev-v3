@@ -40,6 +40,8 @@ const AMA: NextPage = () => {
       await axios.put('/api/questions', {
         id: questionItem.id,
       })
+
+      query.refetch();
     } catch (error) {
       toast("something went wrong, please try again later", {
         position: 'top-center',
