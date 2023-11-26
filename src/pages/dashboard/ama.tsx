@@ -94,7 +94,7 @@ const AMA: NextPage = () => {
                   </div>
                   <p>{question.question}</p>
                 </div>
-                <button className="border flex flex-row gap-2 items-center px-8 py-2 rounded-full bg-gradient-to-r from-blue-500 to-blue-700 text-white font-semibold" onClick={() => handleAnswer(question)}>
+                <button className="flex flex-row gap-2 items-center px-8 py-2 rounded-full bg-gradient-to-r from-blue-500 to-blue-700 text-white font-semibold" onClick={() => handleAnswer(question)}>
                   <span>Answer</span>
                 </button>
               </div>
