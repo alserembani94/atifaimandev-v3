@@ -1,5 +1,5 @@
 {
-  "name": "tailwind-heck",
+  "name": "atifaimandev-v3",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -18,7 +18,8 @@
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^4.11.0",
-    "react-toastify": "^9.1.3"
+    "react-toastify": "^9.1.3",
+    "use-key-capture": "1.0.1-beta.1"
   },
   "devDependencies": {
     "@types/node": "^20",

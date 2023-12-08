@@ -35,6 +35,9 @@ dependencies:
   react-toastify:
     specifier: ^9.1.3
     version: 9.1.3(react-dom@18.2.0)(react@18.2.0)
+  use-key-capture:
+    specifier: 1.0.1-beta.1
+    version: 1.0.1-beta.1(@babel/runtime@7.23.2)(react-dom@18.2.0)(react@18.2.0)
 
 devDependencies:
   '@types/node':
@@ -82,7 +85,6 @@ packages:
     engines: {node: '>=6.9.0'}
     dependencies:
       regenerator-runtime: 0.14.0
-    dev: true
 
   /@eslint-community/eslint-utils@4.4.0(eslint@8.52.0):
     resolution: {integrity: sha512-1/sA4dwrzBAyeUoQ6oxahHKmrZvsnLCg4RfxW3ZFGGmQkSNQPFNLV9CUEFQP1x9EYXHTo5p6xdhZM1Ne9p/AfA==}
@@ -2347,7 +2349,6 @@ packages:
 
   /regenerator-runtime@0.14.0:
     resolution: {integrity: sha512-srw17NI0TUWHuGa5CFGGmhfNIeja30WMBfbslPNhf6JrqQlLN5gcrvig1oqPxiVaXb0oW0XRKtH6Nngs5lKCIA==}
-    dev: true
 
   /regexp.prototype.flags@1.5.1:
     resolution: {integrity: sha512-sy6TXMN+hnP/wMy+ISxg3krXx7BAtWVO4UouuCN/ziM9UEne0euamVNafDfvC83bRNr95y0V5iijeDQFUNpvrg==}
@@ -2762,6 +2763,18 @@ packages:
     dependencies:
       punycode: 2.3.0
     dev: true
+
+  /use-key-capture@1.0.1-beta.1(@babel/runtime@7.23.2)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-6COrP5DGWm8f4x3nFr2p2IlixxY1H3jn3a9gnsoolJWDuA+Lhb+lwayZhztgMSUNxyJxMYefM9wU875g0nV45A==}
+    peerDependencies:
+      '@babel/runtime': ^7.8.4
+      react: ^16.12.0
+      react-dom: ^16.12.0
+    dependencies:
+      '@babel/runtime': 7.23.2
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: false
 
   /utf-8-validate@6.0.3:
     resolution: {integrity: sha512-uIuGf9TWQ/y+0Lp+KGZCMuJWc3N9BHA+l/UmHd/oUHwJJDeysyTRxNQVkbzsIWfGFbRe3OcgML/i0mvVRPOyDA==}

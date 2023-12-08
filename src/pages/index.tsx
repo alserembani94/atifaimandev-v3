@@ -5,6 +5,7 @@ import Timeline from "../components/sections/timeline";
 import { getToolbelt } from "../lib/toolbelt";
 import { twMerge } from "@/lib/helpers";
 import { useEffect } from "react";
+import useKonamiCode from "@/hooks/useKonamiCode";
 
 export const getStaticProps: GetStaticProps = async (context) => {
   return {
@@ -41,6 +42,13 @@ const Index: NextPage = () => {
       "background: #bada55; color: #222"
     );
   }, []);
+
+  const handleKonamiCode = () => {
+    // Do something when Konami Code is entered
+    console.log('Konami Code activated!');
+  };
+
+  useKonamiCode(handleKonamiCode);
 
   return (
     <Default title="The Home of atifaiman.dev">
