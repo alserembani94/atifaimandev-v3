@@ -44,6 +44,7 @@ const Index: NextPage = () => {
   }, []);
 
   const easterEggSurprise = () => {
+    alert("You found me! 🎉 \n Check out the console to get the surprise!");
     // Do something when Konami Code is entered
     console.log("Apa benda ni? 🤔");
     console.log("%c https://link.tngdigital.com.my/wnV6m4Rfuir5NFmg6", "background: #bada55; color: #222");
