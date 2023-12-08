@@ -43,12 +43,17 @@ const Index: NextPage = () => {
     );
   }, []);
 
-  const handleKonamiCode = () => {
+  const easterEggSurprise = () => {
     // Do something when Konami Code is entered
-    console.log('Konami Code activated!');
+    console.log("Apa benda ni? 🤔");
+    console.log("%c https://link.tngdigital.com.my/wnV6m4Rfuir5NFmg6", "background: #bada55; color: #222");
+    console.log(
+      "%cDon't tell others, yea? Let this be a secret. 👀",
+      "background: #222; color: #bada55"
+    );
   };
 
-  useKonamiCode(handleKonamiCode);
+  useKonamiCode(easterEggSurprise);
 
   return (
     <Default title="The Home of atifaiman.dev">
