@@ -2,10 +2,19 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: [
-      'scontent.fkul10-1.fna.fbcdn.net',
-      'res.cloudinary.com',
-      'avatars.githubusercontent.com',
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'scontent.fkul10-1.fna.fbcdn.net',
+      },
+      {
+        protocol: 'https',
+        hostname: 'res.cloudinary.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'avatars.githubusercontent.com',
+      },
     ],
   },
 
@@ -49,6 +58,11 @@ const nextConfig = {
       {
         source: '/buymeacoffee',
         destination: 'https://www.buymeacoffee.com/atifaiman',
+        permanent: true
+      },
+      {
+        source: '/threejs',
+        destination: 'https://three.atifaiman.dev',
         permanent: true
       },
     ];

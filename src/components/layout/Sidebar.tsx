@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import { getCta } from "../../lib/cta";
 import { getNavigation } from "../../lib/navigation";
 import Image from 'next/image';
+import { SiThreedotjs } from "react-icons/si";
 
 interface Props {
   
@@ -28,6 +29,11 @@ const Sidebar: React.FC<Props> = ({
               </li>
             ))
           }
+          {/* <li>
+            <a href="https://three.atifaiman.dev" target="_blank" className="border-r-4 border-black hover:border-blue-500 text-black hover:text-blue-500 flex flex-row justify-end items-center transition-all duration-300 ease-in-out text-right pr-6 py-2">
+              My<SiThreedotjs className="mx-1" /> Journey
+            </a>
+          </li> */}
         </ul>
       </nav>
 

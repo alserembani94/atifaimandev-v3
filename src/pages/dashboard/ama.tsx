@@ -28,7 +28,7 @@ const AMA: NextPage = () => {
   const questions = query.isFetched ? query.data.questions.rows : [];
 
   const options = {
-    animationData: require("../../animation/ask-me-anything.json"),
+    animationData: require("@/animation/ask-me-anything.json"),
     loop: true,
     autoplay: true,
   };

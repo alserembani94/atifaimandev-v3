@@ -1,9 +1,9 @@
 import { useLottie } from "lottie-react";
 import { NextPage, GetStaticProps } from "next";
-import Default from "../components/layout/Default";
+import Default from "@/components/layout/Default";
 import { MdOpenInNew } from "react-icons/md";
-import Stacks from "../components/sections/stacks";
-import Career from "../components/sections/career";
+import Stacks from "@/components/sections/stacks";
+import Career from "@/components/sections/career";
 import Image from "next/image";
 import { useEffect } from "react";
 
@@ -26,7 +26,7 @@ const About: NextPage = ({}) => {
   };
 
   const options = {
-    animationData: require("../animation/study.json"),
+    animationData: require("@/animation/study.json"),
     loop: true,
     autoplay: true,
   };

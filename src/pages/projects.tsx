@@ -1,7 +1,7 @@
 import { useLottie } from "lottie-react";
 import { NextPage, GetStaticProps } from "next";
-import Default from "../components/layout/Default";
-import { getProjects } from "../lib/projects";
+import Default from "@/components/layout/Default";
+import { getProjects } from "@/lib/projects";
 import Image from "next/image";
 import { twMerge } from "@/lib/helpers";
 import { useEffect } from "react";
@@ -26,7 +26,7 @@ const Projects: NextPage = () => {
   }, []);
 
   const options = {
-    animationData: require("../animation/present.json"),
+    animationData: require("@/animation/present.json"),
     loop: true,
     autoplay: true,
   };

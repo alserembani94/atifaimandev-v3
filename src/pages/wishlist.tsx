@@ -1,6 +1,6 @@
 import { useLottie } from "lottie-react";
 import { NextPage, GetStaticProps } from "next";
-import Default from "../components/layout/Default";
+import Default from "@/components/layout/Default";
 import { useEffect } from "react";
 
 export const getStaticProps: GetStaticProps = async (context) => {
@@ -22,7 +22,7 @@ const Wishlist: NextPage = () => {
   };
 
   const options = {
-    animationData: require("../animation/checklist.json"),
+    animationData: require("@/animation/checklist.json"),
     loop: true,
     autoplay: true,
   };

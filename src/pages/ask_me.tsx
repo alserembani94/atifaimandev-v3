@@ -27,13 +27,13 @@ const AskMe: NextPage = () => {
   };
 
   const options = {
-    animationData: require("../animation/ask-me-anything.json"),
+    animationData: require("@/animation/ask-me-anything.json"),
     loop: true,
     autoplay: true,
   };
 
   const loadingLottieOptions = {
-    animationData: require("../animation/loading.json"),
+    animationData: require("@/animation/loading.json"),
     loop: true,
     autoplay: true,
     style: {
@@ -51,7 +51,7 @@ const AskMe: NextPage = () => {
     if (question) {
       try {
         setStatus('submitting');
-        await axios.post('/api/questions', {
+        await axios.post('/archive/api/questions', {
           question,
         });
 

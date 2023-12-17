@@ -1,11 +1,10 @@
 import { useLottie } from "lottie-react";
 import { GetStaticProps, NextPage } from "next";
-import Default from "../components/layout/Default";
-import Timeline from "../components/sections/timeline";
-import { getToolbelt } from "../lib/toolbelt";
+import Default from "@/components/layout/Default";
+import Timeline from "@/components/sections/timeline";
+import { getToolbelt } from "@/lib/toolbelt";
 import { twMerge } from "@/lib/helpers";
 import { useEffect } from "react";
-import useKonamiCode from "@/hooks/useKonamiCode";
 
 export const getStaticProps: GetStaticProps = async (context) => {
   return {
@@ -23,7 +22,7 @@ const Index: NextPage = () => {
   };
 
   const options = {
-    animationData: require("../animation/dev-person.json"),
+    animationData: require("@/animation/dev-person.json"),
     loop: true,
     autoplay: true,
   };

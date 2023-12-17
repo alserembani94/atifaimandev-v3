@@ -1,6 +1,6 @@
 import { useLottie } from "lottie-react";
 import { NextPage, GetStaticProps } from "next";
-import Default from "../components/layout/Default";
+import Default from "@/components/layout/Default";
 import Image from "next/image";
 import { IoMdHeart } from "react-icons/io";
 import { FaCommentAlt } from "react-icons/fa";
@@ -57,7 +57,7 @@ const Blogs: NextPage<Props> = ({ data }) => {
   };
 
   const options = {
-    animationData: require("../animation/reading.json"),
+    animationData: require("@/animation/reading.json"),
     loop: true,
     autoplay: true,
   };

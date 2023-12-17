@@ -25,6 +25,10 @@ export const getNavigation = () => {
       path: "/ask_me"
     },
     {
+      title: "My Three.js Journey",
+      path: "/threejs",
+    },
+    {
       title: "Venture into Forest",
       path: "/venture-into-forest",
     },
