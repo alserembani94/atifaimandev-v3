@@ -26,5 +26,9 @@ Sentry.init({
       maskAllText: true,
       blockAllMedia: true,
     }),
+    new Sentry.Feedback({
+      // Additional SDK configuration goes in here, for example:
+      colorScheme: "light",
+    }),
   ],
 });
