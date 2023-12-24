@@ -51,7 +51,7 @@ const AskMe: NextPage = () => {
     if (question) {
       try {
         setStatus('submitting');
-        await axios.post('/archive/api/questions', {
+        await axios.post('/api/questions', {
           question,
         });
 
