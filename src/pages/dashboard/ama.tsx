@@ -107,12 +107,25 @@ const AMA: NextPage = () => {
       {selectedQuestion &&
         <Modal onClose={() => setSelectedQuestion(null)}>
           <div className="flex flex-col items-center gap-4">
-            <div ref={amaCardRef} className="flex flex-col rounded-2xl w-full overflow-hidden shadow-md text-2xl">
-              <div className="p-8 bg-gradient-to-r from-blue-500 to-blue-700 text-white">
+            {/* <div ref={amaCardRef} className="flex flex-col rounded-2xl w-full overflow-hidden shadow-md text-2xl p-4">
+              <div className="p-8 bg-gradient-to-r from-blue-500 to-blue-700 text-white rounded-lg shadow-inner shadow-blue-800">
                 <p className="font-bold text-center">Ask me Web Dev and Career</p>
               </div>
               <div className="p-8 w-full outline-none font-bold bg-white">
                 <p className="text-center">{selectedQuestion.question}</p>
+              </div>
+            </div> */}
+            <div ref={amaCardRef} className="flex flex-col rounded-2xl w-full overflow-hidden shadow-md text-2xl p-4 bg-gradient-to-r from-blue-500 to-blue-700 text-white">
+              <div className="pb-6 pt-2 flex flex-col leading-7 items-center">
+                <p className="font-bold text-center text-blue-400 text-sm">Ask me about</p>
+                <hr className="border-blue-400 w-1/3" />
+                <p className="font-bold text-center text-blue-50">Web Dev and Career</p>
+              </div>
+              <div className="p-8 w-full outline-none font-bold bg-white text-blue-950 rounded-lg shadow-inner shadow-blue-800">
+                <p className="text-center break-words">{selectedQuestion.question}</p>
+              </div>
+              <div>
+                <p className="font-bold text-center text-blue-400 text-xs pt-3 pb-1">AMA by atifaiman</p>
               </div>
             </div>
             <button className="mt-4 w-full px-8 py-2 rounded-full bg-gradient-to-r from-blue-500 to-blue-700 text-white font-semibold" onClick={saveHandler}>Save</button>

@@ -6,7 +6,6 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
   },
   plugins: [
     plugin(function ({ addBase, theme }) {
