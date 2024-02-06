@@ -65,6 +65,11 @@ const nextConfig = {
         destination: 'https://three.atifaiman.dev',
         permanent: true
       },
+      {
+        source: '/consult_resume',
+        destination: 'https://kena.lol',
+        permanent: true
+      }
     ];
   },
 }
