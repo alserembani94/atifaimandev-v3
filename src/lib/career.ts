@@ -9,7 +9,7 @@ const career = [
     end: "Present",
     logo: "/logo/logo-decube.webp",
     description:
-      "Developing the data observability dashboard. In charge in setting up the frontend architecture, CI/CD pipelines, and also the frontend team.",
+      "Developing the data observability dashboard. In charge in setting up the frontend architecture, CI/CD pipelines, and coach frontend team members for a better code quality.",
     stacks: [
       "React",
       "Next.js",
