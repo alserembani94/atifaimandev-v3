@@ -37,7 +37,7 @@ const useKonamiCode = (callback: () => void) => {
     if (keySequence.join('') === konamiCode.join('')) {
       callback();
     }
-  }, [keySequence, callback]);
+  }, [keySequence]);
 };
 
 export default useKonamiCode;
