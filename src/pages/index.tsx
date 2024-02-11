@@ -4,7 +4,8 @@ import Default from "@/components/layout/Default";
 import Timeline from "@/components/sections/timeline";
 import { getToolbelt } from "@/lib/toolbelt";
 import { twMerge } from "@/lib/helpers";
-import { useEffect } from "react";
+import { MouseEventHandler, useEffect } from "react";
+import axios from "axios";
 
 export const getStaticProps: GetStaticProps = async (context) => {
   return {
@@ -42,10 +43,22 @@ const Index: NextPage = () => {
     );
   }, []);
 
+  const handleTest: MouseEventHandler<HTMLButtonElement> = async (e) => {
+    e.preventDefault();
+
+    try {
+      await axios.post('/api/stashes');
+    }
+    catch (error) {
+      console.error(error);
+    }
+  }
+
   return (
     <Default title="The Home of atifaiman.dev">
       {View}
       <div className="text-center my-8">
+        <button onClick={handleTest}>Hello</button>
         <h4>Salam and hello everyone!</h4>
         <h1>
           My name is{" "}

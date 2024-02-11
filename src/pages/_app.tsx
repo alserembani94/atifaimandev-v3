@@ -4,21 +4,30 @@ import {
   QueryClient,
   QueryClientProvider,
 } from '@tanstack/react-query';
-import useKonamiCode from '@/hooks/useKonamiCode';
+import { EasterEggProvider, useEasterEgg } from '@/hooks/useEasterEgg';
+import { useEffect, useState } from 'react';
+import DragonDen from '@/components/sections/DragonDen';
 
 const queryClient = new QueryClient();
 
-export default function App({ Component, pageProps }: AppProps) {
-
-  const easterEggSurprise = () => {
-    alert("You are too late! The game is over. 😂");
-  };
-
-  useKonamiCode(easterEggSurprise);
+export default function App(props: AppProps) {
   
   return (
-    <QueryClientProvider client={queryClient}>
-        <Component {...pageProps} />
-    </QueryClientProvider>
+    <EasterEggProvider>
+      <QueryClientProvider client={queryClient}>
+          <ElevatedApp {...props} />
+      </QueryClientProvider>
+    </EasterEggProvider>
+  )
+}
+
+const ElevatedApp = ({ Component, pageProps }: AppProps) => {
+  const { isOpenDen } = useEasterEgg();
+
+  return (
+    <>
+      <Component {...pageProps} />
+      { isOpenDen && <DragonDen /> }
+    </>
   )
 }

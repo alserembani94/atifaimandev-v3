@@ -24,7 +24,7 @@ const useKonamiCode = (callback: () => void) => {
         newKeySequence.shift();
         return newKeySequence;
       });
-    }, 400);
+    }, 1000);
 
     if (keySequence.length === 0) {
       clearInterval(keyInterval);

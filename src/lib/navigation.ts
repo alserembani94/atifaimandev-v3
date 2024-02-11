@@ -24,6 +24,11 @@ export const getNavigation = () => {
       title: "Ask me anything",
       path: "/ask_me"
     },
+    // {
+    //   title: "Courses",
+    //   path: "/courses",
+    //   tag: ["Upcoming"],
+    // },
     {
       title: "My Three.js Journey",
       path: "/threejs",

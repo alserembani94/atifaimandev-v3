@@ -53,3 +53,7 @@ a {
   justify-content: flex-end;
   font-size: 25px;
 }
+
+.BuyButton-container {
+  background-color: transparent !important;
+}

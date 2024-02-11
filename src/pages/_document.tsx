@@ -4,7 +4,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head />
-      <body>
+      <body style={{backgroundColor: "rgb(244 244 245)"}}>
         <div className="hidden">
           Kena berusaha sikit nak dapat easter egg tu. Tekan-tekan sikit keyboard, nanti muncul la tu.
         </div>
