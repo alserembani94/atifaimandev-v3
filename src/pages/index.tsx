@@ -43,22 +43,10 @@ const Index: NextPage = () => {
     );
   }, []);
 
-  const handleTest: MouseEventHandler<HTMLButtonElement> = async (e) => {
-    e.preventDefault();
-
-    try {
-      await axios.post('/api/stashes');
-    }
-    catch (error) {
-      console.error(error);
-    }
-  }
-
   return (
     <Default title="The Home of atifaiman.dev">
       {View}
       <div className="text-center my-8">
-        <button onClick={handleTest}>Hello</button>
         <h4>Salam and hello everyone!</h4>
         <h1>
           My name is{" "}
