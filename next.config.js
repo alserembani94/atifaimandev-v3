@@ -69,6 +69,11 @@ const nextConfig = {
         source: '/consult_resume',
         destination: 'https://kena.lol',
         permanent: true
+      },
+      {
+        source: '/tax/calculate',
+        destination: 'https://kena.lol',
+        permanent: true
       }
     ];
   },
