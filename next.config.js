@@ -69,11 +69,6 @@ const nextConfig = {
         source: '/consult_resume',
         destination: 'https://kena.lol',
         permanent: true
-      },
-      {
-        source: '/rick_roll',
-        destination: 'https://link.tngdigital.com.my/JmgdVkzaG5MVQGoq6',
-        permanent: true
       }
     ];
   },
