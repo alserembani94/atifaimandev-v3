@@ -7,6 +7,8 @@ const RickRoll: NextPage = () => {
       window.location.href = "https://link.tngdigital.com.my/JmgdVkzaG5MVQGoq6";
     }
   , 5000);
+
+  return () => clearTimeout(timeout);
   }, []);
   return (<p>Redirecting you to the rickroll. All you need to do is wait for 5 seconds. Only the one dares will get rickrolled.</p>);
 };
