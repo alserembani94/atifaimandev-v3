@@ -71,8 +71,8 @@ const nextConfig = {
         permanent: true
       },
       {
-        source: '/tax/calculate',
-        destination: 'https://kena.lol',
+        source: '/rick_roll',
+        destination: 'https://link.tngdigital.com.my/JmgdVkzaG5MVQGoq6',
         permanent: true
       }
     ];
