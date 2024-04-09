@@ -180,19 +180,23 @@ const Eid: NextPage = ({}) => {
           I have prepared a little surprise for you. Scan the QR code below!
         </p>
 
-        <QRCodeSVG
-          level="H"
-          size={300}
-          fgColor="#800000"
-          imageSettings={{
-            src: "./logo/logo-atif.png",
-            height: 64,
-            width: 122,
-            excavate: true,
-          }}
-          value="https://onelink.tngd.my/8mmV/MONEYPACKET?p=1e5022dcbfd37889014ba92a51b338f36d96ccb277afd6a8d9c3d3aa4eada96f98f36c946f89684a199c8b10c0d32752b2102ec45fbd0722f0abeaf4094421d563f7c812cf8f9ea7c261a6b52c9935c1"
-        />
+        {/* Make this div blur whatever content inside */}
+        <div className="filter blur-lg">
+          <QRCodeSVG
+            level="H"
+            size={300}
+            fgColor="#800000"
+            imageSettings={{
+              src: "./logo/logo-atif.png",
+              height: 64,
+              width: 122,
+              excavate: true,
+            }}
+            value="https://onelink.tngd.my/8mmV/MONEYPACKET?p=1e5022dcbfd37889014ba92a51b338f36d96ccb277afd6a8d9c3d3aa4eada96f98f36c946f89684a199c8b10c0d32752b2102ec45fbd0722f0abeaf4094421d563f7c812cf8f9ea7c261a6b52c9935c1"
+          />
+        </div>
 
+        <h4>Sorry, all packets have been claimed 😢</h4>
         <h5 className="mt-8">Have a good day ahead!</h5>
       </div>
 
