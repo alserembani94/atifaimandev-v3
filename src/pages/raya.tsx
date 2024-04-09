@@ -28,7 +28,7 @@ const Eid: NextPage = ({}) => {
   return (
     <Default title="Are you lost?">
       {View}
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center text-center">
         <h1>Eid Mubarak everyone!</h1>
         <h3>Selamat Hari Raya Aidilfitri</h3>
 
