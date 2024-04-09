@@ -145,7 +145,7 @@ const Eid: NextPage = ({}) => {
           <br />
         </p>
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="https://i.redd.it/xnnvfkvcde951.jpg" alt="Eid Mubarak" className="rounded-lg" />
+        <img src="https://i.redd.it/xnnvfkvcde951.jpg" alt="Eid Mubarak" className="rounded-lg w-96" />
 
         <p className="text-center py-8">
           <br />
@@ -182,7 +182,7 @@ const Eid: NextPage = ({}) => {
 
         <QRCodeSVG
           level="H"
-          size={512}
+          size={300}
           fgColor="#800000"
           imageSettings={{
             src: "./logo/logo-atif.png",
