@@ -24,6 +24,10 @@ export const getNavigation = () => {
       title: "Ask me anything",
       path: "/ask_me"
     },
+    {
+      title: "Riang-riang Raya",
+      path: "/raya",
+    },
     // {
     //   title: "Courses",
     //   path: "/courses",
