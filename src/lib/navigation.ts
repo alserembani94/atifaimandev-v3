@@ -27,6 +27,7 @@ export const getNavigation = () => {
     {
       title: "Riang-riang Raya",
       path: "/raya",
+      visible: new Date().getDate() === 9 || new Date().getDate() === 10,
     },
     // {
     //   title: "Courses",

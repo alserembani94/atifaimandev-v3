@@ -28,7 +28,7 @@ const Sidebar: React.FC<Props> = ({
       <nav className="font-bold text-lg">
         <ul className="flex flex-col">
           {
-            navigation.map((item, index) => (
+            navigation.map((item, index) => item.visible && (
               <li key={item.title + index} className="flex flex-row gap-4 justify-end items-center group">
                 {/* {
                   item.tag && item.tag.map((tag) => (
