@@ -78,15 +78,8 @@ const Blogs: NextPage<Props> = ({ data }) => {
             target="_blank"
           >
             {blog.cover_image ? (
-              <div className="w-full h-40 relative">
-                <Image
-                  src={blog.cover_image}
-                  alt={blog.title}
-                  fill
-                  sizes="200px"
-                  className="object-cover object-center"
-                />
-              </div>
+              // eslint-disable-next-line @next/next/no-img-element
+              <img src={blog.cover_image} alt={blog.title} className="w-full h-40 object-cover object-right" />
             ) : (
               <div className="w-full h-40 bg-zinc-200" />
             )}

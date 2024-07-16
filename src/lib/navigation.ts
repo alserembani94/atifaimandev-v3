@@ -29,11 +29,6 @@ export const getNavigation = () => {
       path: "/ask_me",
       visible: true,
     },
-    {
-      title: "Riang-riang Raya",
-      path: "/raya",
-      visible: new Date().getDate() === 9 || new Date().getDate() === 10,
-    },
     // {
     //   title: "Courses",
     //   path: "/courses",
