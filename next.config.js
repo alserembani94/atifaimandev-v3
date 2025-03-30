@@ -73,6 +73,11 @@ const nextConfig = {
         source: '/consult_resume',
         destination: 'https://kena.lol',
         permanent: true
+      },
+      {
+        source: '/wintertide',
+        destination: 'https://cdn.tngdigital.com.my/s/oauth2/index.html#/moneypacket?p=ec1f25317dff66049b1c33631d988dff998442d78e268dad9e2862b79c0ab34caf99c5801962eb446e01ba04c5f98fb6d3b60cf7317ea0a4e81856e1e4293bd0b2fa665f9f22d6fbf1a1c8bfb3ce46ab',
+        permanent: true
       }
     ];
   },
