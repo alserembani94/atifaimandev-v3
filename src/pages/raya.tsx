@@ -1,8 +1,7 @@
 import { useLottie } from "lottie-react";
 import { NextPage } from "next";
 import Default from "../components/layout/Default";
-import { useEffect } from "react";
-import { QRCodeSVG } from "qrcode.react";
+import { useEffect, useState } from "react";
 
 const Eid: NextPage = ({}) => {
   const style = {
@@ -21,6 +20,28 @@ const Eid: NextPage = ({}) => {
     console.log("%cEid Mubarak! 🌙🎉", "background: #222; color: #bada55");
   }, []);
 
+  // State that reads from local storage to track if user clicks the button
+  const [clicked, setClicked] = useState(false);
+
+  useEffect(() => {
+    const clicked = localStorage.getItem("clicked");
+    if (clicked) {
+      setClicked(true);
+    }
+  }, []);
+
+  const handleClick = () => {
+    if (clicked) return;
+    setClicked(true);
+    localStorage.setItem("clicked", "true");
+    // open new tab
+    window.open("https://kena.lol", "_blank");
+  };
+
+  const handleForReal = () => {
+    window.open("https://atifaiman.dev/raya/for_real", "_blank");
+  };
+
   return (
     <Default
       title="Selamat Hari Raya!"
@@ -30,47 +51,23 @@ const Eid: NextPage = ({}) => {
       <div className="flex flex-col items-center text-center">
         <h1>Eid Mubarak everyone!</h1>
         <h3>Selamat Hari Raya Aidilfitri</h3>
+        {!clicked && (
+          <button
+            onClick={handleClick}
+            className="px-8 py-4 rounded bg-orange-400 text-white my-4 font-bold"
+          >
+            Let&apos;s get duit raya!
+          </button>
+        )}
 
-        <p className="text-center py-8">
-          Congratulations to you (if you are a muslim) for completing this
-          year&apos;s challenge, as a form of obedience and blessings.
-          <br />
-          As we celebrate this festive season, let us not forget the true
-          meaning of Eid, which is to be grateful for the blessings that we have
-          received.
-          <br />
-          <br />
-          May this Eid bring joy, happiness, peace and prosperity to you and
-          your family.
-          <br />
-          <br />
-          For those who are not celebrating, I hope you have a great day ahead!
-          <br />
-          <br />
-          If I have done anything wrong to you, I sincerely apologize for my
-          mistakes. Let us forgive and forget, and start anew. 🙏🏼
-        </p>
-
-        <h6>Anyway!</h6>
-        <br />
-        <p>
-          Numbers (especially duit raya) may seem scary at first,
-          <br />
-          but with celebrating raya, you might need to see in a different
-          perspective,
-          <br />
-          and you will find peace.
-          <br />
-          <br />
-          If you are ready, let&apos;s look into the image!
-        </p>
-
-        <a
-          href="/images/scary_number.png"
-          className="px-6 py-4 bg-orange-400 text-white font-bold my-4 rounded-md"
-        >
-          Show me the image
-        </a>
+        {clicked && (
+          <button
+            className="px-8 py-4 rounded bg-orange-400 text-white my-4 font-bold"
+            onClick={handleForReal}
+          >
+            Kidding, this one is fr
+          </button>
+        )}
       </div>
     </Default>
   );

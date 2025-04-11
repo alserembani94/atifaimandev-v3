@@ -75,8 +75,8 @@ const nextConfig = {
         permanent: true
       },
       {
-        source: '/wintertide',
-        destination: 'https://cdn.tngdigital.com.my/s/oauth2/index.html#/moneypacket?p=ec1f25317dff66049b1c33631d988dff998442d78e268dad9e2862b79c0ab34caf99c5801962eb446e01ba04c5f98fb6d3b60cf7317ea0a4e81856e1e4293bd0b2fa665f9f22d6fbf1a1c8bfb3ce46ab',
+        source: '/raya/for_real',
+        destination: 'https://cdn.tngdigital.com.my/s/oauth2/index.html#/moneypacket?p=bd06712c20a746d07aec70989c2a5a40b8e7ec7e26ac480236ab5ac8d3d3cbd639d5cc05371c80c3dcc1121cbd17249eb11972ed861b0baf0b0f17e69fa8d8972acb8fb78d4ca4023a2ff873ad432b95',
         permanent: true
       }
     ];
