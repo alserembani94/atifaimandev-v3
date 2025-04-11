@@ -51,6 +51,10 @@ const Eid: NextPage = ({}) => {
       <div className="flex flex-col items-center text-center">
         <h1>Eid Mubarak everyone!</h1>
         <h3>Selamat Hari Raya Aidilfitri</h3>
+        <p>
+          Sorry, but to prevent bots from X (previously Twitter), I had to do it
+          this way.
+        </p>
         {!clicked && (
           <button
             onClick={handleClick}
