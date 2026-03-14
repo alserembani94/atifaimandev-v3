@@ -35,6 +35,7 @@
     "eslint-config-next": "^14.0",
     "javascript-obfuscator": "^4.1.0",
     "nextjs-obfuscator": "^3.0.0",
+    "oxlint": "^1.55.0",
     "postcss": "latest",
     "tailwindcss": "latest",
     "typescript": "^5.3.3"
